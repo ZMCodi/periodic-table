@@ -20,22 +20,38 @@ fi
 if [ -v ATOMIC_NUMBER ]
 then
   GET_DATA=$($PSQL "SELECT name, symbol, type, atomic_mass, melting_point_celsius, boiling_point_celsius FROM elements FULL JOIN properties USING (atomic_number) WHERE atomic_number = $ATOMIC_NUMBER;")
-  echo "$GET_DATA" | while IFS="|" read NAME SYMBOL TYPE ATOMIC_MASS MP_CELSIUS BP_CELSIUS
-  do
+  if [[ -z $GET_DATA ]]
+  then
+    echo I could not find that element in the database.
+  else
+    echo "$GET_DATA" | while IFS="|" read NAME SYMBOL TYPE ATOMIC_MASS MP_CELSIUS BP_CELSIUS
+    do
     echo "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MP_CELSIUS celsius and a boiling point of $BP_CELSIUS celsius."
-  done
+    done
+  fi
+  
 elif [ -v SYMBOL ]
 then
   GET_DATA=$($PSQL "SELECT name, atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius FROM elements FULL JOIN properties USING (atomic_number) WHERE symbol = '$SYMBOL';")
-  echo "$GET_DATA" | while IFS="|" read NAME ATOMIC_NUMBER TYPE ATOMIC_MASS MP_CELSIUS BP_CELSIUS
-  do
-    echo "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MP_CELSIUS celsius and a boiling point of $BP_CELSIUS celsius."
-  done
+  if [[ -z $GET_DATA ]]
+  then
+    echo I could not find that element in the database.
+  else
+    echo "$GET_DATA" | while IFS="|" read NAME ATOMIC_NUMBER TYPE ATOMIC_MASS MP_CELSIUS BP_CELSIUS
+    do
+      echo "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MP_CELSIUS celsius and a boiling point of $BP_CELSIUS celsius."
+    done
+  fi
 elif [ -v NAME ]
 then
   GET_DATA=$($PSQL "SELECT symbol, atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius FROM elements FULL JOIN properties USING (atomic_number) WHERE name = '$NAME';")
-  echo "$GET_DATA" | while IFS="|" read SYMBOL ATOMIC_NUMBER TYPE ATOMIC_MASS MP_CELSIUS BP_CELSIUS
-  do
-    echo "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MP_CELSIUS celsius and a boiling point of $BP_CELSIUS celsius."
-  done
+  if [[ -z $GET_DATA ]]
+  then
+    echo I could not find that element in the database.
+  else
+    echo "$GET_DATA" | while IFS="|" read SYMBOL ATOMIC_NUMBER TYPE ATOMIC_MASS MP_CELSIUS BP_CELSIUS
+    do
+      echo "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MP_CELSIUS celsius and a boiling point of $BP_CELSIUS celsius."
+    done
+  fi
 fi
