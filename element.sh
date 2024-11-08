@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [[ -z $1 ]]
+then
+  echo "Please provide an element as an argument."
+else
+  ELEMENT=$1
+  if [[ $ELEMENT =~ ^[0-9]+$ ]]
+  then
+    ATOMIC_NUMBER=$ELEMENT
+  elif [[ $ELEMENT =~ ^[A-Z]$ || $ELEMENT =~ ^[A-Z][a-z]$ ]]
+  then
+    SYMBOL=$ELEMENT
+  fi
+  else
+    NAME=$ELEMENT
+fi
