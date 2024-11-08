@@ -31,7 +31,11 @@ then
   do
     echo "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MP_CELSIUS celsius and a boiling point of $BP_CELSIUS celsius."
   done
-elif [-v NAME ]
+elif [ -v NAME ]
 then
-  echo you are using name $NAME
+  GET_DATA=$($PSQL "SELECT symbol, atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius FROM elements FULL JOIN properties USING (atomic_number) WHERE name = '$NAME';")
+  echo "$GET_DATA" | while IFS="|" read SYMBOL ATOMIC_NUMBER TYPE ATOMIC_MASS MP_CELSIUS BP_CELSIUS
+  do
+    echo "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $ATOMIC_MASS amu. $NAME has a melting point of $MP_CELSIUS celsius and a boiling point of $BP_CELSIUS celsius."
+  done
 fi
