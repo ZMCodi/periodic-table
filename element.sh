@@ -19,7 +19,7 @@ fi
 
 if [ -v ATOMIC_NUMBER ]
 then
-  GET_DATA=$($PSQL "SELECT name, symbol, type, atomic_mass, melting_point_celsius, boiling_point_celsius FROM elements FULL JOIN properties USING (atomic_number) WHERE atomic_number = $ATOMIC_NUMBER;")
+  GET_DATA=$($PSQL "SELECT name, symbol, type, atomic_mass, melting_point_celsius, boiling_point_celsius FROM elements FULL JOIN properties USING (atomic_number) LEFT JOIN types USING (type_id) WHERE atomic_number = $ATOMIC_NUMBER;")
   if [[ -z $GET_DATA ]]
   then
     echo I could not find that element in the database.
@@ -32,7 +32,7 @@ then
   
 elif [ -v SYMBOL ]
 then
-  GET_DATA=$($PSQL "SELECT name, atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius FROM elements FULL JOIN properties USING (atomic_number) WHERE symbol = '$SYMBOL';")
+  GET_DATA=$($PSQL "SELECT name, atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius FROM elements FULL JOIN properties USING (atomic_number) LEFT JOIN types USING (type_id) WHERE symbol = '$SYMBOL';")
   if [[ -z $GET_DATA ]]
   then
     echo I could not find that element in the database.
@@ -44,7 +44,7 @@ then
   fi
 elif [ -v NAME ]
 then
-  GET_DATA=$($PSQL "SELECT symbol, atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius FROM elements FULL JOIN properties USING (atomic_number) WHERE name = '$NAME';")
+  GET_DATA=$($PSQL "SELECT symbol, atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius FROM elements FULL JOIN properties USING (atomic_number) LEFT JOIN types USING (type_id) WHERE name = '$NAME';")
   if [[ -z $GET_DATA ]]
   then
     echo I could not find that element in the database.
