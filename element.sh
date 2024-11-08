@@ -11,7 +11,17 @@ else
   elif [[ $ELEMENT =~ ^[A-Z]$ || $ELEMENT =~ ^[A-Z][a-z]$ ]]
   then
     SYMBOL=$ELEMENT
-  fi
   else
     NAME=$ELEMENT
+  fi
+fi
+
+if [ -v ATOMIC_NUMBER ]
+then
+  echo you are using atomic number $ATOMIC_NUMBER
+elif [ -v SYMBOL ]
+then
+  echo you are using symbol $SYMBOL
+else
+  echo you are using name $NAME
 fi
