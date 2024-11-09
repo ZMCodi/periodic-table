@@ -50,7 +50,7 @@ GET_ELEMENT_INFO() {
   fi
 
 
-if [ -v ATOMIC_NUMBER ]
+if [ ! -z "${ATOMIC_NUMBER+x}" ]
 then
   GET_DATA=$($PSQL "SELECT name, symbol, type, atomic_mass, melting_point_celsius, boiling_point_celsius FROM elements FULL JOIN properties USING (atomic_number) LEFT JOIN types USING (type_id) WHERE atomic_number = $ATOMIC_NUMBER;")
   if [[ -z $GET_DATA ]]
@@ -63,7 +63,7 @@ then
     done
   fi
   
-elif [ -v SYMBOL ]
+elif [ ! -z "${SYMBOL+x}" ]
 then
   GET_DATA=$($PSQL "SELECT name, atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius FROM elements FULL JOIN properties USING (atomic_number) LEFT JOIN types USING (type_id) WHERE symbol = '$SYMBOL';")
   if [[ -z $GET_DATA ]]
@@ -75,7 +75,7 @@ then
       PRINT_DATA
     done
   fi
-elif [ -v NAME ]
+elif [ ! -z "${NAME+x}" ]
 then
   GET_DATA=$($PSQL "SELECT symbol, atomic_number, type, atomic_mass, melting_point_celsius, boiling_point_celsius FROM elements FULL JOIN properties USING (atomic_number) LEFT JOIN types USING (type_id) WHERE name = '$NAME';")
   if [[ -z $GET_DATA ]]
