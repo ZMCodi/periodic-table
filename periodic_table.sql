@@ -54,7 +54,6 @@ CREATE TABLE public.elements (
 );
 
 
-ALTER TABLE public.elements OWNER TO freecodecamp;
 
 --
 -- Name: properties; Type: TABLE; Schema: public; Owner: freecodecamp
@@ -69,7 +68,6 @@ CREATE TABLE public.properties (
 );
 
 
-ALTER TABLE public.properties OWNER TO freecodecamp;
 
 --
 -- Name: types; Type: TABLE; Schema: public; Owner: freecodecamp
@@ -81,7 +79,6 @@ CREATE TABLE public.types (
 );
 
 
-ALTER TABLE public.types OWNER TO freecodecamp;
 
 --
 -- Name: types_type_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
@@ -96,7 +93,6 @@ CREATE SEQUENCE public.types_type_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.types_type_id_seq OWNER TO freecodecamp;
 
 --
 -- Name: types_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
