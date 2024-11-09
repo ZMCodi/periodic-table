@@ -1,11 +1,13 @@
 #!/bin/bash
-PSQL="psql --username=freecodecamp --dbname=periodic_table -t --no-align -c"
+PSQL="sudo -u postgres psql --dbname=periodic_table -t --no-align -c"
 
-if [[ -z $1 ]]
-then
-  echo "Please provide an element as an argument."
-else
-  ELEMENT=$1
+echo -e "\nWelcome to the periodic table database"
+
+GET_ELEMENT_INFO() {
+  echo "Please enter an element (name, symbol or atomic number) to get its info:"
+  read ELEMENT
+
+
   if [[ $ELEMENT =~ ^[0-9]+$ ]]
   then
     ATOMIC_NUMBER=$ELEMENT
@@ -15,7 +17,7 @@ else
   else
     NAME=$ELEMENT
   fi
-fi
+
 
 if [ -v ATOMIC_NUMBER ]
 then
@@ -55,3 +57,19 @@ then
     done
   fi
 fi
+  TRY_AGAIN
+
+}
+
+TRY_AGAIN() {
+  echo "Would you like info on another element (y/n)? "
+  read AGAIN
+
+  case $AGAIN in
+  "y") GET_ELEMENT_INFO ;;
+  "n") ;;
+  *) TRY_AGAIN 
+  esac
+}
+
+GET_ELEMENT_INFO
