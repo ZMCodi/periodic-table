@@ -1,0 +1,119 @@
+Element,Symbol,AtomicNumber,AtomicMass,MeltingPoint_Celsius,BoilingPoint_Celsius,Type
+Hydrogen,H,1,1.008,-259.16,-252.87,Nonmetal
+Helium,He,2,4.003,-272.2,-268.93,Noble Gas
+Lithium,Li,3,6.94,180.54,1342,Alkali Metal
+Beryllium,Be,4,9.012,1287,2470,Alkaline Earth Metal
+Boron,B,5,10.81,2075,4000,Metalloid
+Carbon,C,6,12.01,3550,4027,Nonmetal
+Nitrogen,N,7,14.01,-210.1,-195.79,Nonmetal
+Oxygen,O,8,16.00,-218.79,-182.96,Nonmetal
+Fluorine,F,9,19.00,-219.67,-188.12,Halogen
+Neon,Ne,10,20.18,-248.59,-246.08,Noble Gas
+Sodium,Na,11,22.99,97.72,883,Alkali Metal
+Magnesium,Mg,12,24.31,650,1090,Alkaline Earth Metal
+Aluminum,Al,13,26.98,660.32,2519,Post-transition Metal
+Silicon,Si,14,28.09,1414,3265,Metalloid
+Phosphorus,P,15,30.97,44.15,280.5,Nonmetal
+Sulfur,S,16,32.07,115.21,444.72,Nonmetal
+Chlorine,Cl,17,35.45,-101.5,-34.04,Halogen
+Argon,Ar,18,39.95,-189.35,-185.85,Noble Gas
+Potassium,K,19,39.10,63.38,759,Alkali Metal
+Calcium,Ca,20,40.08,841.9,1484,Alkaline Earth Metal
+Scandium,Sc,21,44.96,1541,2830,Transition Metal
+Titanium,Ti,22,47.87,1668,3287,Transition Metal
+Vanadium,V,23,50.94,1910,3407,Transition Metal
+Chromium,Cr,24,52.00,1907,2671,Transition Metal
+Manganese,Mn,25,54.94,1246,2061,Transition Metal
+Iron,Fe,26,55.85,1538,2862,Transition Metal
+Cobalt,Co,27,58.93,1495,2927,Transition Metal
+Nickel,Ni,28,58.69,1455,2913,Transition Metal
+Copper,Cu,29,63.55,1084.62,2562,Transition Metal
+Zinc,Zn,30,65.38,419.53,907,Transition Metal
+Gallium,Ga,31,69.72,29.76,2204,Post-transition Metal
+Germanium,Ge,32,72.63,938.25,2820,Metalloid
+Arsenic,As,33,74.92,817,614,Metalloid
+Selenium,Se,34,78.96,221,685,Nonmetal
+Bromine,Br,35,79.90,-7.2,58.8,Halogen
+Krypton,Kr,36,83.80,-157.36,-153.22,Noble Gas
+Rubidium,Rb,37,85.47,39.31,688,Alkali Metal
+Strontium,Sr,38,87.62,777,1382,Alkaline Earth Metal
+Yttrium,Y,39,88.91,1522,3345,Transition Metal
+Zirconium,Zr,40,91.22,1855,4409,Transition Metal
+Niobium,Nb,41,92.91,2477,4744,Transition Metal
+Molybdenum,Mo,42,95.95,2623,4639,Transition Metal
+Technetium,Tc,43,98.00,2157,4265,Transition Metal
+Ruthenium,Ru,44,101.07,2334,4150,Transition Metal
+Rhodium,Rh,45,102.91,1964,3695,Transition Metal
+Palladium,Pd,46,106.42,1554.9,2963,Transition Metal
+Silver,Ag,47,107.87,961.78,2162,Transition Metal
+Cadmium,Cd,48,112.41,321.07,767,Transition Metal
+Indium,In,49,114.82,156.6,2072,Post-transition Metal
+Tin,Sn,50,118.71,231.93,2602,Post-transition Metal
+Antimony,Sb,51,121.76,630.63,1587,Metalloid
+Tellurium,Te,52,127.60,449.51,988,Metalloid
+Iodine,I,53,126.90,113.7,184.3,Halogen
+Xenon,Xe,54,131.29,-111.75,-108.12,Noble Gas
+Cesium,Cs,55,132.91,28.44,671,Alkali Metal
+Barium,Ba,56,137.33,727,1897,Alkaline Earth Metal
+Lanthanum,La,57,138.91,920,3464,Lanthanide
+Cerium,Ce,58,140.12,798,3360,Lanthanide
+Praseodymium,Pr,59,140.91,931,3290,Lanthanide
+Neodymium,Nd,60,144.24,1021,3100,Lanthanide
+Promethium,Pm,61,145.00,1042,3000,Lanthanide
+Samarium,Sm,62,150.36,1074,1794,Lanthanide
+Europium,Eu,63,151.96,822,1527,Lanthanide
+Gadolinium,Gd,64,157.25,1313,3273,Lanthanide
+Terbium,Tb,65,158.93,1356,3230,Lanthanide
+Dysprosium,Dy,66,162.50,1412,2567,Lanthanide
+Holmium,Ho,67,164.93,1474,2700,Lanthanide
+Erbium,Er,68,167.26,1497,2868,Lanthanide
+Thulium,Tm,69,168.93,1545,1950,Lanthanide
+Ytterbium,Yb,70,173.05,819,1196,Lanthanide
+Lutetium,Lu,71,174.97,1663,3402,Lanthanide
+Hafnium,Hf,72,178.49,2233,4603,Transition Metal
+Tantalum,Ta,73,180.95,3017,5458,Transition Metal
+Tungsten,W,74,183.84,3422,5555,Transition Metal
+Rhenium,Re,75,186.21,3186,5596,Transition Metal
+Osmium,Os,76,190.23,3033,5012,Transition Metal
+Iridium,Ir,77,192.22,2466,4428,Transition Metal
+Platinum,Pt,78,195.08,1768.3,3825,Transition Metal
+Gold,Au,79,196.97,1064.18,2856,Transition Metal
+Mercury,Hg,80,200.59,-38.83,356.73,Transition Metal
+Thallium,Tl,81,204.38,304,1473,Post-transition Metal
+Lead,Pb,82,207.2,327.46,1749,Post-transition Metal
+Bismuth,Bi,83,208.98,271.4,1564,Post-transition Metal
+Polonium,Po,84,209.00,254,962,Post-transition Metal
+Astatine,At,85,210.00,302,337,Halogen
+Radon,Rn,86,222.00,-71,-61.7,Noble Gas
+Francium,Fr,87,223.00,27,677,Alkali Metal
+Radium,Ra,88,226.00,700,1737,Alkaline Earth Metal
+Actinium,Ac,89,227.00,1050,3200,Actinide
+Thorium,Th,90,232.04,1750,4820,Actinide
+Protactinium,Pa,91,231.04,1568,4000,Actinide
+Uranium,U,92,238.03,1132.2,4131,Actinide
+Neptunium,Np,93,237.00,644,3902,Actinide
+Plutonium,Pu,94,244.00,640,3230,Actinide
+Americium,Am,95,243.00,1176,2011,Actinide
+Curium,Cm,96,247.00,1345,3110,Actinide
+Berkelium,Bk,97,247.00,986,2627,Actinide
+Californium,Cf,98,251.00,900,1470,Actinide
+Einsteinium,Es,99,252.00,860,996,Actinide
+Fermium,Fm,100,257.00,1527,2000,Actinide
+Mendelevium,Md,101,258.00,827,Unknown,Actinide
+Nobelium,No,102,259.00,827,Unknown,Actinide
+Lawrencium,Lr,103,262.00,1627,Unknown,Actinide
+Rutherfordium,Rf,104,267.00,2100,5500,Transition Metal
+Dubnium,Db,105,270.00,Unknown,Unknown,Transition Metal
+Seaborgium,Sg,106,269.00,Unknown,Unknown,Transition Metal
+Bohrium,Bh,107,270.00,Unknown,Unknown,Transition Metal
+Hassium,Hs,108,269.00,Unknown,Unknown,Transition Metal
+Meitnerium,Mt,109,278.00,Unknown,Unknown,Transition Metal
+Darmstadtium,Ds,110,281.00,Unknown,Unknown,Transition Metal
+Roentgenium,Rg,111,282.00,Unknown,Unknown,Transition Metal
+Copernicium,Cn,112,285.00,Unknown,Unknown,Transition Metal
+Nihonium,Nh,113,286.00,Unknown,Unknown,Post-transition Metal
+Flerovium,Fl,114,289.00,Unknown,Unknown,Post-transition Metal
+Moscovium,Mc,115,290.00,Unknown,Unknown,Post-transition Metal
+Livermorium,Lv,116,293.00,Unknown,Unknown,Post-transition Metal
+Tennessine,Ts,117,294.00,Unknown,Unknown,Halogen
+Oganesson,Og,118,294.00,Unknown,Unknown,Noble Gas
