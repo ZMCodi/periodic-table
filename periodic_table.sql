@@ -44,7 +44,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: elements; Type: TABLE; Schema: public; Owner: freecodecamp
+-- Name: elements; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.elements (
@@ -56,7 +56,7 @@ CREATE TABLE public.elements (
 
 
 --
--- Name: properties; Type: TABLE; Schema: public; Owner: freecodecamp
+-- Name: properties; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.properties (
@@ -70,7 +70,7 @@ CREATE TABLE public.properties (
 
 
 --
--- Name: types; Type: TABLE; Schema: public; Owner: freecodecamp
+-- Name: types; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.types (
@@ -81,7 +81,7 @@ CREATE TABLE public.types (
 
 
 --
--- Name: types_type_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
+-- Name: types_type_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
 CREATE SEQUENCE public.types_type_id_seq
@@ -95,21 +95,21 @@ CREATE SEQUENCE public.types_type_id_seq
 
 
 --
--- Name: types_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
+-- Name: types_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE public.types_type_id_seq OWNED BY public.types.type_id;
 
 
 --
--- Name: types type_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
+-- Name: types type_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.types ALTER COLUMN type_id SET DEFAULT nextval('public.types_type_id_seq'::regclass);
 
 
 --
--- Data for Name: elements; Type: TABLE DATA; Schema: public; Owner: freecodecamp
+-- Data for Name: elements; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 INSERT INTO public.elements VALUES (2, 'He', 'Helium');
@@ -125,7 +125,7 @@ INSERT INTO public.elements VALUES (10, 'Ne', 'Neon');
 
 
 --
--- Data for Name: properties; Type: TABLE DATA; Schema: public; Owner: freecodecamp
+-- Data for Name: properties; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 INSERT INTO public.properties VALUES (1, 1.008, -259.1, -252.9, 2);
@@ -141,7 +141,7 @@ INSERT INTO public.properties VALUES (10, 20.18, -248.6, -246.1, 2);
 
 
 --
--- Data for Name: types; Type: TABLE DATA; Schema: public; Owner: freecodecamp
+-- Data for Name: types; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 INSERT INTO public.types VALUES (1, 'metal');
@@ -150,14 +150,14 @@ INSERT INTO public.types VALUES (3, 'metalloid');
 
 
 --
--- Name: types_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
+-- Name: types_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public.types_type_id_seq', 3, true);
 
 
 --
--- Name: elements elements_atomic_number_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+-- Name: elements elements_atomic_number_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.elements
@@ -165,7 +165,7 @@ ALTER TABLE ONLY public.elements
 
 
 --
--- Name: elements elements_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+-- Name: elements elements_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.elements
@@ -173,7 +173,7 @@ ALTER TABLE ONLY public.elements
 
 
 --
--- Name: elements elements_symbol_name_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+-- Name: elements elements_symbol_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.elements
@@ -181,7 +181,7 @@ ALTER TABLE ONLY public.elements
 
 
 --
--- Name: properties properties_atomic_number_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+-- Name: properties properties_atomic_number_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.properties
@@ -189,7 +189,7 @@ ALTER TABLE ONLY public.properties
 
 
 --
--- Name: properties properties_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+-- Name: properties properties_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.properties
@@ -197,7 +197,7 @@ ALTER TABLE ONLY public.properties
 
 
 --
--- Name: types types_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+-- Name: types types_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.types
@@ -205,7 +205,7 @@ ALTER TABLE ONLY public.types
 
 
 --
--- Name: properties properties_atomic_number_fkey; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
+-- Name: properties properties_atomic_number_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.properties
@@ -213,7 +213,7 @@ ALTER TABLE ONLY public.properties
 
 
 --
--- Name: properties properties_type_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
+-- Name: properties properties_type_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.properties
