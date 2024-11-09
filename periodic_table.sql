@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 16.4 (Ubuntu 16.4-0ubuntu0.24.04.2)
--- Dumped by pg_dump version 16.4 (Ubuntu 16.4-0ubuntu0.24.04.2)
+-- Dumped from database version 15.8 (Homebrew)
+-- Dumped by pg_dump version 15.8 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -16,12 +16,11 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
-DROP DATABASE periodic_table;
 --
 -- Name: periodic_table; Type: DATABASE; Schema: -; Owner: postgres
 --
 
-CREATE DATABASE periodic_table WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = libc LOCALE = 'C.UTF-8';
+CREATE DATABASE periodic_table WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = libc LOCALE = 'C';
 
 
 ALTER DATABASE periodic_table OWNER TO postgres;
@@ -96,7 +95,7 @@ CREATE SEQUENCE public.types_type_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.types_type_id_seq OWNER TO postgres;
+ALTER TABLE public.types_type_id_seq OWNER TO postgres;
 
 --
 -- Name: types_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
